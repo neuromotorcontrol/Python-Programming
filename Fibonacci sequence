@@ -1,0 +1,22 @@
+def fibonnaci(num):
+    """
+    Given an integer value num, returns a list containing the first n 
+    numbers in the fibonacci sequence. The fibonacci sequence is a 
+    sequence of numbers where the i-th number F_i is defined as follows:
+
+    For i = 0,        F_i = 0 
+    For i = 1,        F_i = 1 
+    For all other i,  F_i = F_(i-1) + F_(i-2)
+
+    For example, fibonacci(7) should return the following list:
+    [0, 1, 1, 2, 3, 5, 8]
+    
+    If the input n < 0, returns an empty list.
+    """
+    
+    a = 0
+    b = 1
+    list = [0,1]
+    for i in range(num-2):
+      list = list.append(list[i] + list[i+1])
+      return list
